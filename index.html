@@ -1,60 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
+  <link href="/reset.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="/index.css" rel="stylesheet">
+
   <title>Frontend Mentor | News homepage</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <div class="template">
+    <div class="menu">
+      <aside class="menu-logo">
+        <img src="/assets/images/logo.svg" alt="logo">
+      </aside>
+      <aside class="menu-bar">
+        <img src="/assets/images/icon-menu.svg" alt="menu-bar-icon">
+      </aside>
+    </div>
+    <!-- Home
+    New
+    Popular
+    Trending
+    Categories -->
 
-  Home
-  New
-  Popular
-  Trending
-  Categories
+    <!-- main section -->
+    <div class="main">
+      <div class="main-picture">
+        <img src="/assets/images/image-web-3-mobile.jpg" alt="mobile-main-cover-image">
+      </div>
+      <div class="main-body">
+        <section class="main-body-header">
+          The Bright Future of Web 3.0?
+        </section>
+        <aside class="main-text">
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+          of the people. But is it really fulfilling its promise?
+        </aside>
+        <aside class="main-button">
+          READ MORE
+        </aside>
+      </div>
+    </div>
 
-  The Bright Future of Web 3.0?
+    <!-- news section -->
+    <div class="news">
+      <div class="news-header header-m">New</div>
+      <div class="news-section">
+        <section class="news-section-header header-s">Hydrogen VS Electric Cars</section>
+        <section class="news-section-body">Will hydrogen-fueled cars ever catch up to EVs?</section>
+      </div>
+      <div class="news-break-container">
+        <div class="news-break"></div>
+      </div>
+      <div class="news-section">
+        <section class="news-section-header header-s">The Downsides of AI Artistry</section>
+        <section class="news-section-body">What are the possible adverse effects of on-demand AI image generation?
+        </section>
+      </div>
+      <div class="news-break-container">
+        <div class="news-break"></div>
+      </div>
+      <div class="news-section pb-24">
+        <section class="news-section-header header-s">Is VC Funding Drying Up?</section>
+        <section class="news-section-body">Private funding by VC firms is down 50% YOY. We take a look at what that
+          means.
+        </section>
+      </div>
+    </div>
 
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-  But is it really fulfilling its promise?
+    <!-- recommended section -->
+    <div class="recommended">
+      <div class="recommended-section">
+        <aside class="recommended-thumbnail">
+          <img src="./assets/images/image-retro-pcs.jpg" alt="thumbnail-for-reviving-retro-pcs-article">
+        </aside>
+        <aside class="recommended-body">
+          <section class="recommended-number header-m">01</section>
+          <section class="recommended-header header-xs">Reviving Retro PCs</section>
+          <section class="recommended-description">What happens when old PCs are given modern upgrades?</section>
+        </aside>
+      </div>
+      <div class="recommended-section">
+        <aside class="recommended-thumbnail">
+          <img src="./assets/images/image-top-laptops.jpg" alt="thumbnail-for-top-2022-laptops-article">
+        </aside>
+        <aside class="recommended-body">
+          <section class="recommended-number header-m">02</section>
+          <section class="recommended-header header-xs">Top 10 Laptops of 2022</section>
+          <section class="recommended-description">Our best picks for various needs and budgets.</section>
+        </aside>
+      </div>
+      <div class="recommended-section">
+        <aside class="recommended-thumbnail">
+          <img src="./assets/images/image-gaming-growth.jpg" alt="thumbnail-for-gaming-growth-article">
+        </aside>
+        <aside class="recommended-body">
+          <section class="recommended-number header-m">03</section>
+          <section class="recommended-header header-xs">The Growth of Gaming</section>
+          <section class="recommended-description">How the pandemic has sparked fresh opportunities.</section>
+        </aside>
+      </div>
+    </div>
+  </div>
 
-  Read more
-
-  New 
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  </div>
 </body>
+
 </html>

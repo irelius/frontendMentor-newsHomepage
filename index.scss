@@ -1,0 +1,244 @@
+:root {
+    --almost-white: #FFFDFA;
+    --dark-space-blue: #00001A;
+    --gunmetal: #5E607A;
+    --light-vermillion: #F15D51;
+    --silver: #C5C6CE;
+    --yellow: #E9AA52;
+
+    --64: 64px;
+    --56: 56px;
+    --40: 40px;
+    --35: 35px;
+    --32: 32px;
+    --31: 31px;
+    --30: 30px;
+    --29: 29px;
+    --28: 28px;
+    --26: 26px;
+    --24: 24px;
+    --21: 21px;
+    --20: 20px;
+    --18: 18px;
+    --16: 16px;
+    --15: 15px;
+    --14: 14px;
+    --11: 11px;
+    --8: 8px;
+    --1: 1px;
+
+    --regular: 400;
+    --bold: 700;
+    --extra-bold: 800;
+}
+
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: var(--15);
+    line-height: var(--26);
+    font-weight: var(--regular);
+}
+
+.header {
+    &-xs {
+        font-size: var(--18);
+        line-height: var(--24);
+        font-weight: var(--extra-bold)
+    }
+
+    &-s {
+        font-size: var(--20);
+        line-height: var(--24);
+        font-weight: var(--extra-bold)
+    }
+
+    &-m {
+        font-size: var(--32);
+        // setting line high to 1 sets line height to "=1 * 'font-size'"
+        // in this case, it would be "1 * var(--32)", which is just var(--32)
+        // checkout out MDN Line Height for more information
+        line-height: 1;
+        font-weight: var(--bold)
+    }
+
+    &-l {
+        font-size: var(--40);
+        line-height: 1;
+        font-weight: var(--bold)
+    }
+
+    &-xl {
+        font-size: var(--56);
+        line-height: 1;
+        font-weight: var(--extra-bold)
+    }
+}
+
+body {
+    background-color: #eee;
+}
+
+.template {
+    width: 375px;
+    height: 1872px;
+    background-color: white;
+    margin: auto auto;
+    padding: 0px 16px 80px 16px;
+}
+
+// layout utilities
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--28);
+    padding-bottom: var(--32);
+
+    &-logo>img {
+        max-width: 44.98px;
+        height: auto;
+        display: block;
+    }
+
+    &-bar>img {
+        max-width: 40px;
+        height: auto;
+        display: block;
+    }
+
+}
+
+.main {
+    &-body {
+        @media screen and (min-width: 720px) {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &-picture {
+        height: 300px;
+        width: 343px;
+        margin-bottom: var(--20);
+
+        @media screen and (min-width: 720px) {
+            // padding-bottom: var(--30);
+        }
+    }
+
+    &-body-header {
+        padding-bottom: var(--20);
+        font-size: var(--40);
+        font-weight: var(--extra-bold);
+        line-height: 1;
+
+        @media screen and (min-width: 720px) {
+            // padding-bottom: var(--1);
+            // font-size: var(--56);
+        }
+
+    }
+
+    &-text {
+        padding-bottom: var(--24);
+        font-size: var(--body);
+        color: var(--gunmetal);
+
+        @media screen and (min-width: 720px) {
+            // padding-bottom: var(--29);
+        }
+    }
+
+    &-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 185px;
+        height: 48px;
+        background-color: var(--light-vermillion);
+        color: var(--almost-white);
+        font-size: var(--14);
+        font-weight: var(--bold);
+        letter-spacing: 4.38px;
+    }
+
+    margin-bottom: var(--64);
+
+}
+
+.news {
+    background-color: var(--dark-space-blue);
+    padding-left: var(--21);
+    padding-right: var(--20);
+
+    &-header {
+        padding-top: var(--24);
+        padding-bottom: var(--35);
+        color: var(--yellow);
+    }
+
+    &-section {
+        padding-bottom: var(--29)
+    }
+
+    &-section-header {
+        color: var(--almost-white);
+        padding-bottom: var(--8)
+    }
+
+    &-section-body {
+        color: var(--silver);
+    }
+
+    &-break-container {
+        display: flex;
+        justify-content: center;
+        height: 1px;
+        padding-bottom: var(--31);
+    }
+
+    &-break {
+        height: 1px;
+        width: 302px;
+        border: 1px solid var(--gunmetal);
+    }
+
+    margin-bottom: var(--64);
+}
+
+
+.recommended {
+    &-section {
+        display: flex;
+        margin-bottom: var(--32);
+    }
+
+    &-thumbnail {
+        height: 129px;
+        flex: 0 0 100px;
+    }
+
+    &-body {
+        padding-left: 24px;
+    }
+
+    &-number {
+        color: var(--silver);
+        padding-bottom: var(--11)
+    }
+
+    &-header {
+        padding-bottom: var(--9)
+    }
+
+    &-description {
+        color: var(--gunmetal);
+        font-size: var(body);
+    }
+}
+
+
+.pb-24 {
+    padding-bottom: 24px;
+}
