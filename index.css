@@ -1,6 +1,6 @@
 :root {
   --almost-white: #FFFDFA;
-  --dark-space-blue: #00001A;
+  --dark-space-blue: rgb(0, 0, 26);
   --gunmetal: #5E607A;
   --light-vermillion: #F15D51;
   --silver: #C5C6CE;
@@ -129,6 +129,37 @@ body {
   font-size: var(--14);
   font-weight: var(--bold);
   letter-spacing: 4.38px;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: end;
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 375px;
+  margin: auto;
+  background-color: rgba(0, 0, 26, 0.5);
+}
+.sidebar-background {
+  right: 0;
+  height: 100%;
+  width: 256px;
+  background-color: var(--almost-white);
+}
+.sidebar-exit {
+  text-align: right;
+  padding-top: 27.3px;
+  padding-right: 20.8px;
+}
+.sidebar-options-container {
+  margin-top: 86.3px;
+  margin-left: var(--24);
+  margin-right: var(--29);
+}
+.sidebar-option {
+  font-size: var(--18);
+  margin-bottom: var(--24);
 }
 
 .news {
