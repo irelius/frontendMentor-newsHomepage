@@ -31,38 +31,84 @@
 <body>
   <div class="template">
     <div class="menu">
-      <aside class="menu-logo">
+      <section class="menu-logo">
         <img src="/assets/images/logo.svg" alt="logo">
-      </aside>
-      <aside class="menu-bar">
+      </section>
+      <!-- display when screen is small -->
+      <section id="sidebar-button" class="menu-bar lg-none">
         <img src="/assets/images/icon-menu.svg" alt="menu-bar-icon">
-      </aside>
+      </section>
+      <!-- display when screen is large -->
+      <section class="menu-bar sm-none">
+        <aside class="menu-bar-options cursor">Home</aside>
+        <aside class="menu-bar-options cursor">New</aside>
+        <aside class="menu-bar-options cursor">Popular</aside>
+        <aside class="menu-bar-options cursor">Trending</aside>
+        <aside class="menu-bar-options cursor">Categories</aside>
+      </section>
     </div>
 
-    <!-- main section -->
-    <div class="main">
-      <div class="main-picture">
-        <img src="/assets/images/image-web-3-mobile.jpg" alt="mobile-main-cover-image">
+    <div class="hero">
+      <!-- main section -->
+      <div class="main">
+        <div class="main-picture sm-none">
+          <img src="/assets/images/image-web-3-desktop.jpg" alt="desktop-main-cover-image">
+        </div>
+        <div class="main-picture lg-none">
+          <img src="/assets/images/image-web-3-mobile.jpg" alt="mobile-main-cover-image">
+        </div>
+        <div class="main-body">
+          <section class="main-body-header">
+            The Bright Future of Web 3.0?
+          </section>
+          <section class="main-body-container lg-fd-col">
+            <aside class="main-text">
+              We dive into the next evolution of the web that claims to put the power of the platforms back into the
+              hands
+              of the people. But is it really fulfilling its promise?
+            </aside>
+            <aside class="main-button cursor">
+              READ MORE
+            </aside>
+          </section>
+        </div>
       </div>
-      <div class="main-body">
-        <section class="main-body-header">
-          The Bright Future of Web 3.0?
-        </section>
-        <aside class="main-text">
-          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
-          of the people. But is it really fulfilling its promise?
-        </aside>
-        <aside class="main-button">
-          READ MORE
-        </aside>
+
+      <!-- news section -->
+      <div class="news">
+        <div class="news-header">New</div>
+        <div class="news-section">
+          <section class="news-section-header header-s">Hydrogen VS Electric Cars</section>
+          <section class="news-section-body">Will hydrogen-fueled cars ever catch up to EVs?</section>
+        </div>
+        <div class="news-break-container">
+          <div class="news-break"></div>
+        </div>
+        <div class="news-section">
+          <section class="news-section-header header-s">The Downsides of AI Artistry</section>
+          <section class="news-section-body">What are the possible adverse effects of on-demand AI image generation?
+          </section>
+        </div>
+        <div class="news-break-container">
+          <div class="news-break"></div>
+        </div>
+        <div class="news-section pb-24">
+          <section class="news-section-header header-s">Is VC Funding Drying Up?</section>
+          <section class="news-section-body">Private funding by VC firms is down 50% YOY. We take a look at what that
+            means.
+          </section>
+        </div>
       </div>
     </div>
 
     <!-- side bar section -->
-    <div class="sidebar">
+    <!-- <div class="sidebar"> -->
+    <!-- temporarily set display of this section to none -->
+    <div id="sidebar-menu" class="sidebar display-none">
       <div class="sidebar-background">
         <section class="sidebar-exit">
-          <img class="sidebar-exit-button" src="/assets/images/icon-menu-close.svg" alt="exit-button-for-side-menu-bar">
+          <img id="sidebar-exit-button" class="sidebar-exit-button" src="/assets/images/icon-menu-close.svg"
+            alt="exit-button-for-side-menu-bar">
         </section>
         <section class="sidebar-options-container">
           <section class="sidebar-option">Home</section>
@@ -74,31 +120,6 @@
       </div>
     </div>
 
-    <!-- news section -->
-    <div class="news">
-      <div class="news-header header-m">New</div>
-      <div class="news-section">
-        <section class="news-section-header header-s">Hydrogen VS Electric Cars</section>
-        <section class="news-section-body">Will hydrogen-fueled cars ever catch up to EVs?</section>
-      </div>
-      <div class="news-break-container">
-        <div class="news-break"></div>
-      </div>
-      <div class="news-section">
-        <section class="news-section-header header-s">The Downsides of AI Artistry</section>
-        <section class="news-section-body">What are the possible adverse effects of on-demand AI image generation?
-        </section>
-      </div>
-      <div class="news-break-container">
-        <div class="news-break"></div>
-      </div>
-      <div class="news-section pb-24">
-        <section class="news-section-header header-s">Is VC Funding Drying Up?</section>
-        <section class="news-section-body">Private funding by VC firms is down 50% YOY. We take a look at what that
-          means.
-        </section>
-      </div>
-    </div>
 
     <!-- recommended section -->
     <div class="recommended">
@@ -140,6 +161,21 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
   </div>
+
+  <script>
+    const sideBarMenu = document.getElementById('sidebar-menu')
+    const sideBarShow = document.getElementById("sidebar-button")
+    const sideBarClose = document.getElementById('sidebar-exit-button')
+
+    if (sideBarMenu) {
+      sideBarShow.addEventListener("click", () => {
+        sideBarMenu.classList.remove("display-none")
+      })
+      sideBarClose.addEventListener("click", () => {
+        sideBarMenu.classList.add("display-none")
+      })
+    }
+  </script>
 </body>
 
 </html>
