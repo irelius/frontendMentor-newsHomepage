@@ -222,4 +222,10 @@ body {
   padding-bottom: 24px;
 }
 
+@media screen and (min-width: 768px) {
+  .desktop-d-none {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
